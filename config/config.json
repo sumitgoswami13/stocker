@@ -1,0 +1,13 @@
+{
+    "dbName": "stocker",
+    "dbConfig": {
+      "server": "localhost",
+      "authentication": {
+        "options": {
+          "username": "root",
+          "password": ""
+        }
+      }
+    }
+  }
+  
