@@ -12,6 +12,11 @@ module.exports = (sequelize, Sequelize) => {
           type: Sequelize.STRING,
           allowNull: false,
         },
+        userEmail: {
+          type: Sequelize.STRING,
+          allowNull: false,
+          unique:true,
+        },
         joinedOn: {
           type: Sequelize.DATE,
           allowNull: false,
@@ -35,6 +40,15 @@ module.exports = (sequelize, Sequelize) => {
           type: Sequelize.DATE,
           allowNull: true,
         },
+        type:{
+          type: Sequelize.ENUM('admin', 'user'),
+          defaultValue: 'user',
+          allowNull: false,
+        },
+        referesh_token:{
+          type: Sequelize.STRING,
+          allowNull: true,
+        }
       },
       {
         tableName: 'Users',
